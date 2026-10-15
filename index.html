@@ -108,6 +108,16 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 .half-size{font-size:20px;margin:22px 0 0;max-width:60ch;word-break:break-all}
 .half-size a{color:var(--x)}
 @media (prefers-reduced-motion: reduce){#mini{transition:none}}
+
+.sphere-flow{display:flex;align-items:center;justify-content:center;gap:80px;height:100%;width:100%}
+.sphere{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--x),var(--x-soft));border:3px solid var(--x);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:var(--ink);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+.flow-arrow{width:60px;height:3px;background:var(--a);position:relative;opacity:0;transition:opacity 0.5s ease}
+.flow-arrow::after{content:'';position:absolute;right:-10px;top:-5px;width:0;height:0;border-left:12px solid var(--a);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.flow-arrow.active{opacity:1}
+@keyframes flowCycle{0%,33%{opacity:0}34%,100%{opacity:1}}
+.arrow-1{animation:flowCycle 12s infinite}
+.arrow-2{animation:flowCycle 12s 4s infinite}
+.arrow-3{animation:flowCycle 12s 8s infinite}
 </style>
 </head>
 <body>
@@ -283,6 +293,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 		</aside>
 	</section>
 	
+	<!----
 	<section class="provoke">
 		<p class="big">Colombia y la OTAN</p>
 		<p class="fade-up">En la práctica, la relación se traduce en interoperabilidad. La adopción de estándares comunes facilita los entrenamientos y ejercicios conjuntos, conocidos como ejercicios de interoperabilidad.</p>
@@ -291,6 +302,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 			- ..
 		</aside>
 	</section>
+	--->
 
 <!---- El patrón reactivo. La interoperabilidad casi siempre llega después de una tragedia: Baltimore, el 11-S, Madrid, Afganistán. El argumento para el auditorio es que la gestión documental tiene la oportunidad de ser proactiva y construir el ecosistema antes de que una pérdida masiva de información obligue a hacerlo. --->
 
@@ -373,7 +385,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="1" class="step layer-x">
 	  <p class="kicker">Peldaño 1 de 7</p>
-	  <h2>¿Puede un mensaje entre máquinas ser prueba?</h2>
+	  <h2>¿Puede un mensaje entre máquinas ser prueba? - Validez jurídica</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>El EDI (ANSI X12, UN/EDIFACT) y la Ley Modelo de la CNUDMI sobre comercio electrónico de 1996 dieron estatus jurídico al mensaje de datos.</p></div>
 		<div><h3>En Colombia</h3><p>La Ley 527 de 1999 define el EDI y el mensaje de datos, con equivalencia funcional al escrito, la firma y el original.</p></div>
@@ -386,7 +398,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="2" class="step layer-x">
 	  <p class="kicker">Peldaño 2 de 7</p>
-	  <h2>¿Quién pone las reglas y cómo se decide?</h2>
+	  <h2>¿Quién pone las reglas y cómo se decide? - Marco de gobernanza</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>Interoperable Europe Act (Reglamento UE 2024/903): Board, Comunidad abierta desde mayo de 2025 y evaluaciones de interoperabilidad obligatorias desde enero de 2025.</p></div>
 		<div><h3>En Colombia</h3><p>El Marco de Interoperabilidad de Gobierno Digital adopta los cuatro dominios del EIF. Su modelo de madurez es un autodiagnóstico, no una obligación previa.</p></div>
@@ -398,7 +410,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="3" class="step layer-x">
 	  <p class="kicker">Peldaño 3 de 7</p>
-	  <h2>¿Hablamos el mismo idioma?</h2>
+	  <h2>¿Hablamos el mismo idioma? - Semántica común</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>SEMIC en Europa (vocabularios core, DCAT-AP). NIEMOpen 6.0, estándar OASIS desde diciembre de 2025, con más de 20.000 elementos en XML, JSON u OWL.</p></div>
 		<div><h3>En Colombia</h3><p>El Lenguaje Común de Intercambio de Información, administrado por el MinTIC, cumple el papel semántico del marco nacional.</p></div>
@@ -410,7 +422,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="4" class="step layer-x">
 	  <p class="kicker">Peldaño 4 de 7</p>
-	  <h2>¿Cómo viaja la información con garantías?</h2>
+	  <h2>¿Cómo viaja la información con garantías? - Intercambio confiable</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>X-Road (Estonia y Finlandia, gestionado por NIIS), eDelivery y Peppol en Europa, y UBL con la norma europea EN 16931 para facturación.</p></div>
 		<div><h3>En Colombia</h3><p>X-Road conecta 130 entidades (octubre de 2025). La factura electrónica en UBL 2.1 validada por la DIAN es EDI maduro.</p></div>
@@ -422,7 +434,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="5" class="step layer-x">
 	  <p class="kicker">Peldaño 5 de 7</p>
-	  <h2>¿Funciona en la ciudad y el territorio?</h2>
+	  <h2>¿Funciona en la ciudad y el territorio? - Ecosistema territorial</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>MIMs Plus (OASC y Living-in.EU), NGSI-LD y el espacio de datos DS4SSCC en Europa. GTFS, Open311 y NIEM para emergencias en Estados Unidos.</p></div>
 		<div><h3>En Colombia</h3><p>Hay marcos territoriales (Cartagena) e infraestructuras geoespaciales (ICDE, IDECA), pero falta un perfil nacional para datos de sensores y operación.</p></div>
@@ -434,7 +446,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="6" class="step layer-a">
 	  <p class="kicker">Peldaño 6 de 7</p>
-	  <h2>¿Cuándo el intercambio se vuelve documento de archivo?</h2>
+	  <h2>¿Cuándo el intercambio se vuelve documento de archivo? - Captura archivística</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>ISO 15489 e ISO 23081 (metadatos para documentos) y el principio de gestión documental desde el diseño.</p></div>
 		<div><h3>En Colombia</h3><p>La normativa del AGN sobre documento electrónico y el modelo de requisitos para SGDEA existen, pero no dialogan con el marco del MinTIC.</p></div>
@@ -446,7 +458,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section data-step="7" class="step layer-a">
 	  <p class="kicker">Peldaño 7 de 7</p>
-	  <h2>¿Cómo sobrevive y vuelve a ser útil?</h2>
+	  <h2>¿Cómo sobrevive y vuelve a ser útil? - Preservación y reuso</h2>
 	  <div class="cols">
 		<div><h3>Referente externo</h3><p>E-ARK (CSIP, SIP, AIP, DIP), sostenido desde septiembre de 2025 por el DILCIS Board, el DLM Forum y la Open Preservation Foundation. PREMIS, RiC-O y DCAT.</p></div>
 		<div><h3>En Colombia</h3><p>No hay un formato común de transferencia entre los SGDEA y los archivos históricos.</p></div>
@@ -476,14 +488,14 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 	  <table>
 		<thead><tr><th>Modelo</th><th>¿Cómo Funciona?</th><th>Ejemplos</th></tr></thead>
 		<tbody>
-		  <tr><td>Gremial</td><td>Los competidores acuerdan lo no competitivo y crean infraestructura común</td><td>Asobancaria, Zengin (Japón), PayNow (Singapur), Interac (Canadá), interoperabilidad de dinero móvil en Tanzania</td></tr>
+		  <tr><td>Gremial</td><td>Los competidores acuerdan lo no competitivo y crean infraestructura común</td><td>Asobancaria, Zengin (Japón), PayNow (Singapur), Interac (Canadá)</td></tr>
 		  <tr><td>Gremio convocado por el Estado</td><td>El regulador pide al sector que construya la infraestructura bajo reglas públicas</td><td>NPCI y UPI (India), Bre-B (Colombia)</td></tr>
-		  <tr><td>Mandato estatal</td><td>El Estado impone la interoperabilidad cuando el mercado no la produce</td><td>UnionPay y la interoperabilidad de códigos QR (China), Pix (Brasil), leyes contra el bloqueo de información en salud (Canadá, Estados Unidos)</td></tr>
+		  <tr><td>Mandato estatal</td><td>El Estado impone la interoperabilidad cuando el mercado no la produce</td><td>UnionPay y la interoperabilidad de códigos QR (China), Pix (Brasil)</td></tr>
 		  <tr><td>Supranacional</td><td>Varios Estados construyen una capa común sobre sus sistemas nacionales</td><td>Interoperable Europe Act, PAPSS (África), Nexus (Asia)</td></tr>
 		</tbody>
 	  </table>
-	  <p class="r-fit-text">El modelo híbrido es el que más rápido escala.</p>
-	  <p class="r-fit-text">La soberanía aparece en todos los casos, aunque con contenidos distintos.</p>
+	  <p class="fade-up">El modelo híbrido es el que más rápido escala.</p>
+	  <p class="fade-up">La soberanía aparece en todos los casos, aunque con contenidos distintos.</p>
 	  <aside class="notes">.</aside>
 	</section>
 	
@@ -511,13 +523,40 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 	<section class="provoke">
 		<p class="big">Union Europea - Interoperable Europe</p>
-		<p class="r-fit-text">busca facilitar la interacción entre las instituciones de la UE y los organismos públicos de los Estados miembros mediante el intercambio digital de datos, información y conocimiento, y lograr flujos de datos fluidos entre fronteras.</p>
+		<p class="fade-up">busca facilitar la interacción entre las instituciones de la UE y los organismos públicos de los Estados miembros mediante el intercambio digital de datos, información y conocimiento, y lograr flujos de datos fluidos entre fronteras.</p>
 		<aside class="notes">
 			- ..
 		</aside>
 	</section>
 
+	<section class="provoke">
+		<p class="big">India: un gremio convocado por el banco central</p>
+		<p class="fade-up">La National Payments Corporation of India (NPCI) se fundó en diciembre de 2008 como organización sin ánimo de lucro, creada por el Banco de la Reserva de la India (RBI) y la Asociación de Bancos de la India.</p>
+		<p class="fade-up">El RBI además le entregó sistemas que antes operaba él mismo, como la compensación electrónica. De allí nació UPI, lanzado el 11 de abril de 2016, que permite transferir dinero al instante entre cuentas usando un identificador virtual, un teléfono o el número Aadhaar, sin compartir datos de la cuenta. La escala muestra el efecto de la interoperabilidad: los bancos conectados a UPI pasaron de 44 en el año fiscal 2016 a 703 en 2025.</p>
+		<aside class="notes">
+			- ..
+		</aside>
+	</section>	
 
+	<section class="provoke">
+		<p class="big">Japón, Corea y Singapur: el modelo gremial clásico.</p>
+		<p class="fade-up">En Japón, la asociación de banqueros impulsó en 1973 el Zengin System, la red que interconecta las transferencias entre prácticamente todas las instituciones financieras del país.</p>
+		<p class="fade-up">En Corea, los bancos crearon a mediados de los años ochenta el instituto de telecomunicaciones y compensación financiera (KFTC), que opera la infraestructura común y lanzó la banca abierta nacional en 2019.</p>
+		<p class="fade-up">En Singapur, la asociación de bancos lanzó PayNow en 2017, el sistema de pagos inmediatos por número de teléfono. Luego se conectó con PromptPay, de Tailandia: fue uno de los primeros enlaces bilaterales de pagos inmediatos entre países.</p>
+		<aside class="notes">
+			- ..
+		</aside>
+	</section>	
+	
+	<section class="provoke">
+		<p class="big">China: interoperabilidad por mandato estatal.</p>
+		<p class="fade-up">China muestra el modelo opuesto al gremial. UnionPay se fundó el 26 de marzo de 2002 como asociación del sector de tarjetas bancarias, bajo aprobación del Banco Popular de China, aunque la idea de una red unificada de tarjetas viene de 1993, con el «Proyecto Tarjeta de Oro».</p>
+		<p class="fade-up">El Estado definió el esquema: la regulación del banco central obligó a todos los emisores del país a enrutar las transacciones en yuanes por la red de UnionPay.</p>
+		<p class="fade-up">Veinte años después, el problema se repitió con las billeteras digitales. Alipay y WeChat Pay eran ecosistemas cerrados, y el regulador intervino otra vez.</p>
+		<aside class="notes">
+			- ..
+		</aside>
+	</section>
 
 
 
@@ -536,26 +575,71 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 	</section>
 
 	<section class="provoke">
-		<p class="big">Legislación</p>
-		<p class="lead">Leyes </p>
+		<p class="big">Evolucion Normativa</p>
+		<p class="fade-up">Ley 594 de 1999 - <b>Ley de comercio electrónico - Mensajes de Datos, Firma digital, Entidades de certificación</b></p>
+		<p class="fade-up">Ley 1341 de 2009 - <b>Principios y conceptos de la sociedad de la información </b> </p>
+		<p class="fade-up">Decreto 1377 de 2013 - Protección de datos personales</p>
+		<p class="fade-up">Decreto 1083 de 2015 - <b>Gobierno digital antes gobierno en línea y seguridad digital</b></p>
+		<p class="fade-up">Decreto 2106 de 2019 - <b>Normas para simplificar, suprimir y reformar trámites, procesos y procedimientos de la administración (SUIT) - medios digitales</b> </p>
+		<p class="fade-up">Decreto 620 de 20220 - <b>Lineamientos generales en el uso y operación de los servicios ciudadanos digitales </b> </p>
+		<p class="fade-up">Resolución 2160 de 2020 - <b>Guía de lineamientos de los servicios ciudadanos digitales - Servicios BASE- Interoperabilidad, Autenticación digital, carpeta ciudadana</b> </p>
 	</section>
 
+	<section class="provoke">
+		<p class="big">Evolucion Normativa</p>
+		<p class="fade-up">Resolución 2893 de 2020 - <b>Estandarización de ventanillas únicas, portales de programas transversales, sedes electrónicas, trámites, OPAs e integración con el portal único del estado colombiano.</b></p>
+		<p class="fade-up">Decreto 767 de 2022 - <b>Política de Gobierno Digital</b></p>
+		<p class="fade-up">Decreto 088 de 2022 - <b>Lineamientos y plazos para la digitalización y automatización de trámites y su realización en línea</b></p>
+		<p class="fade-up">Decreto 1263 de 2022 - <b>Define lineamientos y estándares aplicables a la transformación digital pública</b></p>
+		<p class="fade-up">Decreto 338 de 2022 - <b>Modelo de gobernanza de seguridad digital</b></p>
+		<p class="fade-up">Decreto 2277 de 2025 - <b>Modelo de seguridad y privacidad de la información</b></p>
+
+	</section>
 
 	<section class="provoke">
 		<p class="big">ASOBANCARIA</p>
-		<p class="lead"></p>
+		<p class="fade-up">Modernización institucional que trajo la Misión Kemmerer junto con la creación del Banco de la República, la Superintendencia Bancaria y la Contraloría General</p>
+		<p class="fade-up">La fundación se fecha el 31 de agosto de 1936</p>
+		<p class="fade-up">1936 - 1937 - El primer acto del gremio fue un acuerdo de estandarización. Estableció normas generales para estandarizar las operaciones del sistema y regular sus tarifas, anticipándose a la intervención estatal.</p>
+		<p class="fade-up">1930 - 1970 - Un acuerdo interbancario de los años 1930 para compartir información sobre clientes «problemáticos» fue la raíz de CIFIN, la primera central de riesgos del país, creada en los años 1970</p>
+		<p class="fade-up">1999 - Estandarización de seguridad en tarjetas débito y crédito, y de códigos de barras y cheques</p>
+	</section>
+
+	<section class="provoke">
+		<p class="big">ASOBANCARIA</p>
+		<p class="fade-up">2009 - Por primera vez, el valor diario de los pagos electrónicos compensados en las ACH superó al de los cheques</p>
+		<p class="fade-up">2016 - Asobancaria fue la primera entidad privada en acceder a la base de datos de la Registraduría para verificar biometría dactilar antes de operaciones bancarias</p>
+		<p class="fade-up">2025 - Bre-B: el 6 de octubre entró en operación masiva el sistema interoperable de pagos inmediatos del Banco de la República</p>
 	</section>
 
 	<section class="provoke">
 		<p class="big">DIAN</p>
-		<p class="lead"></p>
+		<p class="fade-up">Agilidad en la relación del ciudadano con la administración</p>
+	</section>
+
+	<section class="provoke">
+	    <p class="big">Origen</p>
+	    <p class="fade-up">EDI - El Decreto 1094 de 1996 introdujo la factura electrónica como un documento equivalente de uso facultativo, y la hizo circular por medio de administradores de redes de valor agregado, la infraestructura típica del EDI clásico</p>
+	    <p class="fade-up">XML - El Decreto 1929 de 2007 y la Resolución 14465 de la DIAN, del mismo año, establecieron las definiciones, requisitos, características y contenido técnico de la factura, pero la factura electrónica siguió siendo voluntaria y poco usada</p>
+	    <p class="fade-up">UBL y obligatoriedad - El Decreto 2242 de 2015 fue la primera disposición que estableció un régimen obligatorio de facturación electrónica, con sus condiciones técnicas y su ámbito de aplicación. La Resolución 019 de 2016 fijó los requisitos técnicos, y con ella la DIAN adoptó UBL, el estándar de OASIS para documentos comerciales, como base semántica de la factura.</p>
+	    <p class="fade-up">UBL y obligatoriedad - El Decreto 2242 de 2015 fue la primera disposición que estableció un régimen obligatorio de facturación electrónica, con sus condiciones técnicas y su ámbito de aplicación. La Resolución 019 de 2016 fijó los requisitos técnicos, y con ella la DIAN adoptó UBL, el estándar de OASIS para documentos comerciales, como base semántica de la factura.</p>
+		<aside class="notes">
+			- ..
+		</aside>
 	</section>
 
 	<section class="provoke">
 	  <p class="big">El PDF no es la factura.</p>
 	  <p class="lead">El documento con valor legal es el XML en UBL que validó la DIAN. Lo que imprimimos es su representación gráfica.</p>
 	  <p class="fragment lead ia-line">¿Y si mañana el documento es una respuesta generada por un modelo de IA? ¿Estamos listos para archivarla?</p>
-		<aside class="notes">En un ecosistema interoperable, el documento es un dato intercambiado con evidencia. La pregunta sobre IA queda abierta y se responde al final.</aside>
+	  <aside class="notes">En un ecosistema interoperable, el documento es un dato intercambiado con evidencia. La pregunta sobre IA queda abierta y se responde al final.</aside>
+	</section>
+
+	<section class="provoke">
+		<p class="big">História clínica electrónica</p>
+		<p class="fade-up">La Ley 2015 de 2020 regula la historia clínica electrónica y establece la interoperabilidad como requisito para un acceso oportuno, seguro y confiable a la información en salud.</p>
+		<p class="fade-up">La Resolución 866 de 2021 define los estándares técnicos y de interoperabilidad para que los sistemas de información en salud puedan comunicarse. <b>HL7</b> </p>
+		<p class="fade-up">La Resolución 1888 de 2025 adoptó el Resumen Digital de Atención en Salud (RDA). Según el Ministerio de Salud, desde octubre de 2025 Colombia puso en marcha la interoperabilidad de la historia clínica electrónica, materializada en los Resúmenes Digitales de Atención.</p>
 	</section>
 
 </section>
@@ -573,9 +657,51 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 	</section>
 
 	<section class="provoke">
-	  <p class="big">Condiciones previas</p>
-	  <p class="lead">El documento con valor legal.</p>
+		<p class="big">Normativa</p>
+		<p class="lead">Guia para la Gestión de Documentos y Expedientes Electrónicos de MINTIC</p>
+		<p class="lead">Características de los documentos electrónicos de archivo: Auténticos, Fiables, Íntegros, <strong>Disponibles</strong></p>
+	</section>
 
+	<section>
+		<div class="sphere-flow">
+			<div class="sphere">Sistema 1</div>
+			<div class="flow-arrow arrow-1"></div>
+			<div class="sphere">Sistema 2</div>
+			<div class="flow-arrow arrow-2"></div>
+			<div class="sphere">Sistema 3</div>
+			<div class="flow-arrow arrow-3"></div>
+		</div>
+	</section>
+
+	<section class="sov tech">
+	  <h2>Bajo el capó: interoperabilidad técnica entre sistemas documentales</h2>
+	  <table>
+		<thead><tr><th>Función</th><th>Mecanismos</th><th>Peldaño</th></tr></thead>
+		<tbody>
+		  <tr><td>Acceso y manipulación</td><td>CMIS 1.1 (retenciones y retenciones legales), WebDAV, Fedora API</td><td>4 y 6</td></tr>
+		  <tr><td>Depósito y transferencia</td><td>SWORD con paquetes E-ARK SIP o BagIt; exportación MoReq2010</td><td>6 y 7</td></tr>
+		  <tr><td>Cosecha y descubrimiento</td><td>OAI-PMH, ResourceSync, DCAT</td><td>7</td></tr>
+		  <tr><td>Presentación</td><td>IIIF para imagen, audio y video</td><td>7</td></tr>
+		  <tr><td>Confianza</td><td>Firmas longevas (PAdES, XAdES, ASiC), sellos de tiempo, identificadores persistentes</td><td>1 y 4</td></tr>
+		</tbody>
+	  </table>
+	  <p class="lead">Cada protocolo resuelve una operación. Ninguno trae consigo la archivística: CMIS mueve objetos, no el vínculo archivístico.</p>
+	  <aside class="notes">CMIS 1.1 permite colgar metadatos de TRD como tipos secundarios, pero no conoce expedientes ni disposición final. SWORD entrega el paquete; la calidad depende de lo que va dentro, por eso E-ARK. Advertir: verificar que el soporte CMIS de un proveedor sea real y vigente. Propuesta: un perfil nacional de interoperabilidad para SGDEA.</aside>
+	</section>
+
+	<section class="sov">
+	  <h2>Soberanía digital: ¿quién gobierna el estándar?</h2>
+	  <table>
+		<thead><tr><th>Estándar</th><th>Quién lo sostiene</th><th>Opción para Colombia</th></tr></thead>
+		<tbody>
+		  <tr><td>X-Road</td><td>NIIS, instituto nórdico de soluciones de interoperabilidad</td><td>Pasar de adoptante a participante en su hoja de ruta</td></tr>
+		  <tr><td>NIEMOpen</td><td>OASIS, consorcio internacional de estándares</td><td>Adaptar el modelo bajo gobernanza semántica nacional</td></tr>
+		  <tr><td>E-ARK</td><td>DILCIS Board, DLM Forum y Open Preservation Foundation</td><td>Adoptarlo como formato de transferencia archivística</td></tr>
+		  <tr><td>MIMs Plus</td><td>OASC y Living-in.EU</td><td>Ciudades colombianas en la red de ciudades abiertas</td></tr>
+		</tbody>
+	  </table>
+	  <p class="lead">Los estándares abiertos sobreviven en comunidades. La pregunta es si participamos o solo adoptamos lo que otros deciden.</p>
+	  <aside class="notes">Patrón repetido: los estándares pasan de programas gubernamentales a comunidades abiertas. Soberanía no es aislarse; es tener voz donde se deciden las reglas.</aside>
 	</section>
 
 
@@ -587,7 +713,7 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 <section class="provoke">
 	<section class="sov tech">
 		<p class="big">Avances y retos</p>
-		<p class="lead">Términos de la evolución hacia un ecosistema documental interoperable.</p>
+		<p class="fade-up">Términos de la evolución hacia un ecosistema documental interoperable.</p>
 		<aside class="notes">
 			- ..
 		</aside>
@@ -601,27 +727,9 @@ body{height:100%;margin:0;background:var(--paper);color:var(--ink)}
 
 
 
-
 </section>
 
 
-<!---- 
-<section class="sov tech">
-  <h2>Bajo el capó: interoperabilidad técnica entre sistemas documentales</h2>
-  <table>
-    <thead><tr><th>Función</th><th>Mecanismos</th><th>Peldaño</th></tr></thead>
-    <tbody>
-      <tr><td>Acceso y manipulación</td><td>CMIS 1.1 (retenciones y retenciones legales), WebDAV, Fedora API</td><td>4 y 6</td></tr>
-      <tr><td>Depósito y transferencia</td><td>SWORD con paquetes E-ARK SIP o BagIt; exportación MoReq2010</td><td>6 y 7</td></tr>
-      <tr><td>Cosecha y descubrimiento</td><td>OAI-PMH, ResourceSync, DCAT</td><td>7</td></tr>
-      <tr><td>Presentación</td><td>IIIF para imagen, audio y video</td><td>7</td></tr>
-      <tr><td>Confianza</td><td>Firmas longevas (PAdES, XAdES, ASiC), sellos de tiempo, identificadores persistentes</td><td>1 y 4</td></tr>
-    </tbody>
-  </table>
-  <p class="lead">Cada protocolo resuelve una operación. Ninguno trae consigo la archivística: CMIS mueve objetos, no el vínculo archivístico.</p>
-  <aside class="notes">CMIS 1.1 permite colgar metadatos de TRD como tipos secundarios, pero no conoce expedientes ni disposición final. SWORD entrega el paquete; la calidad depende de lo que va dentro, por eso E-ARK. Advertir: verificar que el soporte CMIS de un proveedor sea real y vigente. Propuesta: un perfil nacional de interoperabilidad para SGDEA.</aside>
-</section>
---->
 
 
 <section style="text-align: center;" data-background-color="#FFFFFF">
